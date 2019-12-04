@@ -22,3 +22,14 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+while True:
+      try:
+        y = int(input("Input the year : ") or datetime.now().year)
+        m = int(input("Input the month : ") or datetime.now().month)
+      except ValueError:
+        print("Please enter a number value for the month and year.")
+        continue
+      else:
+        print(calendar.month(y, m))
+        break
